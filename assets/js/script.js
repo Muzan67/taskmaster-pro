@@ -184,12 +184,21 @@ $(".list-group").on("click", "span", function () {
   // swap out element
   $(this).replaceWith(dateInput);
 
+  // enable jquery ui datepicker
+  dateInput.datepicker({
+    minDate: 1,
+    onClose: function () {
+      // when calender is closed, force a "change" even on the `dateInput`
+      $(this).trigger("change");
+    },
+  });
+
   // automatically bring up the calender
   dateInput.trigger("focus");
 });
 
 // value of due date was changed
-$(".list-group").on("blur", "input[type='text']", function () {
+$(".list-group").on("change", "input[type='text']", function () {
   // get current text
   var date = $(this).val().trim();
 
@@ -208,6 +217,11 @@ $(".list-group").on("blur", "input[type='text']", function () {
     .text(date);
   // replace input with span element
   $(this).replaceWith(taskSpan);
+});
+
+// Modal due date
+$("#modalDueDate").datepicker({
+  minDate: 1,
 });
 
 // remove all tasks
