@@ -16,7 +16,7 @@ You have been recruited by a company called Taskmaster to expand their task-mana
 - Update layout for new statuses.
 - Add drag and drop capabilities.
 - Add due date handling.
-- Customize / improve user experience. 
+- Customize / improve user experience.
 
 ## Table of Contents
 
@@ -65,3 +65,4 @@ Made by Muzan67 Alejandro Cortez
 
 ## Screenshot
 
+![taskmaster-pro](https://user-images.githubusercontent.com/102841726/208227194-32bc39f6-dc57-4d52-8139-0aa837121680.png)
